@@ -1,0 +1,38 @@
+<%include partials/header %>
+
+<form action="/campground/<%=found.id%>/?_method=PUT" method="post">
+
+<div class="ui container" style="margin-top:100px">
+<div class="ui container grid">
+<div class="row">
+<div class="six wide column centered">
+<h1 class="Acme">EDIT <%=found.name%> CampGround</h1>
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">campground name:</h4>
+<input class="in ui input" type="text" name="name" value="<%=found.name%>">
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">image:</h4>
+<input class="in ui input" type="text" name="image" value="<%=found.image%>">
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">details:</h4>
+<textarea class="in ui textArea" name="detail"><%=found.detail%></textarea>
+</div>
+</div>
+<div class="row">
+<div class="two wide centered column">
+<input  class="ui button inverted blue" type="submit"> 
+</div>
+</div>
+</div>
+</form>
+
+<% include partials/footer %>

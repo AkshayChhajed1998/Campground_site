@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<form class="inv" action="/campground/<%=found.id%>/comment" method="post">
+<div style="margin-top:100px  " class="inv ui container">
+<div class="inv ui container grid">
+<div class="inv row">
+<div class="inv five wide centered column">
+<h1 style="font-family:Acme">Add Comment To <%=found.name%></h1>
+</div>
+</div>
+<div class="inv row">
+<div class="inv three wide centered column">
+<h4>comment:</h4>
+<input class=" ui input" type="text" name="value" placeholder="Comment" >
+</div>
+</div>
+<div class="inv row">
+<div class="inv two wide centered column">
+<input class="ui button inverted blue" type="submit">
+</div>
+</div>
+</div>
+</form>
+<% include partials/footer %>

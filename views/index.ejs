@@ -1,0 +1,22 @@
+<% include partials/header %>
+<div class="inv ui container" style="width:96% ; margin: 70px auto ">
+<div class="inv ui grid" style=" width:auto ; margin:0px ; height:100px">
+<h1 class="seven wide column centered" style="padding-top:32px ; font-family:Acme"><i class="Snowflake icon" style="color:rgba(240,120,60,0.8) ; height:30px ; width:30px"></i> Welcome TO YELP CAMP<i class="Snowflake icon" style="color:rgba(240,120,60,0.8) ; height:30px ; width:30px"></i></h1>
+</div>
+<div class="ui grid">
+<div class="two wide centered column">
+<a class="ui button inverted red" href="/campground/new">Insert</a>
+</div>
+</div>
+<div class="ui container  grid">
+<% for(var i=0;i<list.length;i++){ %>
+<div class="four wide column">
+<div class="ui container segment" style="background-color:rgba(0,0,0,0.5)">
+<img width="100%" height="200px" src= <%=list[i].image%> >
+<h3><%=list[i].name%></h3>
+<a class="ui small button inverted green " href="/campground/<%=list[i].id%>">SHOW</a>
+</div>
+</div>
+<% } %>
+</div>
+<% include partials/footer %>

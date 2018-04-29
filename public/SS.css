@@ -1,0 +1,49 @@
+html { 
+  background: url('https://previews.123rf.com/images/nuttakit/nuttakit1111/nuttakit111100016/11156782-below-green-grass-on-wood-for-web-page-background.jpg') fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;
+}
+
+body
+{
+	height:0%;
+	margin-bottom:75px 
+}
+
+.inv
+{
+	background-color:rgba(0,0,0,0);
+}
+
+h2
+{
+	margin-top:5px;
+	margin-bottom:5px;
+	color:#FFFF;
+	padding-left:40%;
+	padding-right:30%
+}
+
+.boss
+{
+  background-color:rgba(0,0,0,0.4); 
+}
+
+.in
+{
+	background-color:rgba(0,0,0,0);
+	font-family:"Acme";
+	font-style: bold;
+}
+
+.acme
+{
+	font-family:"Acme" !important;
+}
+
+.button
+{
+	font-family:"Acme" !important;
+}

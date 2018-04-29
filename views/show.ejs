@@ -1,0 +1,43 @@
+<%include partials/header %>
+
+<div class="ui container" style="margin-top:100px ; padding-top:10px">
+
+<div class="ui container segment" style="margin:50px auto ; width:60% ; background-color:rgba(0,0,0,0.5);
+">
+<img width="100%" height="470px" src="<%=found.image%>">
+<div class="ui container grid">
+<div class="six wide centered column">
+<h2 style="padding:0px 25%; display:inline-block ; margin:10px 0px"><%=found.name%></h2>
+</div>
+<div class="five wide column right floated">
+<h4 style="color:rgba(77,255,0,1);margin-top:15px"><%=found.cost%></h4>
+</div>
+</div>
+<div class="ui container segment inverted purple">
+<p><%=found.detail%></p>
+<hr>
+<h4>Submitted By:-<%=found.author.username%></h4>
+</div>
+<%if(user && user.username===found.author.username){%>
+<a class="ui small button inverted orange" href="/campground/<%=found.id%>/edit" style="margin-bottom:10px">EDIT</a>
+<form action="/campground/<%=found.id%>/delete/?_method=DELETE" method="post"><input type="submit" class="ui button inverted red" value="DELETE"></form>
+<%}%>
+</div>
+<div class="ui container ">
+<a class="ui button inverted green" href="/campground/<%=found.id%>/comment/new">Comment</a>
+</div>
+<% for(var i=0;i<found.comment.length;i++){ if(found.comment[i].review!=="0"){%>
+<div class="ui container segment inverted" style="margin-bottom:10px" >
+<p><%=found.comment[i].author.username%></p>
+<hr>
+<p><%=found.comment[i].value%></p>
+<p><%=found.comment[i].created.toDateString()%></p>
+<%if(user && user.username===found.comment[i].author.username){%>
+<form action="/campground/<%=found.id%>/comment/<%=found.comment[i].id%>/delete?_method=DELETE" method="post" >
+<input type="submit" class="ui button inverted red" value="DELETE">
+</form>
+<%}%>
+</div>
+<%}}%>
+</div>
+<% include partials/footer %>

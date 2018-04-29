@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Yelp_Camp</title>
+<%-addScripts(["http://code.jquery.com/jquery-3.3.1.min.js"
+  ,"https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js","javascripts/typed.min.js"]);%>
+<%-getScripts();%>
+<link rel="stylesheet" type="text/css" href="Landing.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+<link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
+</head>
+<body>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<div  id="heading" > 
+<span id="head" class="coiny"></span>
+<hr>
+<span id="quote" class="coiny color"></span>
+<hr>
+<a class="ui button green" href="\campground">View Campground</a>
+</div>
+<%-addScripts(["/javascripts/landing.js"]);%>
+<%-getScripts();%>
+</body>
+</html>

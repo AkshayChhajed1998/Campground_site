@@ -1,0 +1,50 @@
+<% include partials/header %>
+<script >
+function defaultProfile(img)
+{
+	img.onerror=null;
+	img.src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-circle-128.png";
+}
+</script>
+</div>
+<div class="ui grid" style="margin-top:50px">
+<div class="three wide column">
+<div class="ui vertical menu">
+<a class="acme active item" href="/campground/:id/dashboard/post">         
+<%=user.username%>
+<img id="profile" class="ui circular image" style="border-radius:50% ; width:100px ; height:100px"src="/campground/dashboard/<%=user.id%>/profile" onerror="defaultProfile(this)" >
+</a>
+<a class="acme active item" href="/campground/:id/dashboard/post">
+Posts
+<div class="acme ui teal left pointing label"><%=user.post.length%>
+</div>
+</a>
+<a class="acme item" href="/campground/:id/dashboard/comment">
+Comments
+<div class="acme ui label"><%=user.comment.length%>
+</div>
+</a>
+</div>
+</div>
+<div class="twelve wide stretched column">
+<div class="boss">
+<%for(var i=0;i<user.post.length;i++){%>
+<div class="ui segment inverted" style="margin-top:20px">
+<h3>Post:-<%=user.post[i].name%></h3>
+<h4>Number of Comments:-<%=user.post[i].comment.length%></h4>
+<hr>
+<h3>Comments:-</h3>
+<%for(var j=0;j<user.post[i].comment.length;j++){%>
+<p><p><%=user.post[i].comment[j].value%></p>
+<p>By_______<%=user.post[i].comment[j].author.username%></p>
+<%if(user.post[i].comment[j].review==="0"){%>
+<a class="ui button inverted orange" href="/campground/<%=user.id%>/dashboard/<%=user.post[i].comment[j].id%>/review">RE-VIEW</a></p>
+<%}%>
+<%}%>
+</div>
+<%}%>
+</div>
+</div>
+</div>
+<div>
+<% include partials/footer %>

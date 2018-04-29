@@ -1,0 +1,44 @@
+<%include partials/header %>
+
+<form action="/campground" method="post">
+<div class="ui container" style="margin-top:100px">
+<div class="ui container grid">
+<div class="row">
+<div class="four wide column centered">
+<h1 class="Acme">Feed Yelp_Camp</h1>
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">campground name:</h4>
+<input class="in ui input" type="text" name="name">
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">image:</h4>
+<input class="in ui input" type="text" name="image">
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">campground Cost:</h4>
+<input class="in ui input" type="text" name="cost">
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">details:</h4>
+<textarea class="in ui textArea" name="detail">Details Goes Here</textarea>
+</div>
+</div>
+<div class="row">
+<div class="two wide centered column">
+<input class="ui button inverted blue" type="submit"> 
+</div>
+</div>
+</div>
+</form>
+
+
+<% include partials/footer %>

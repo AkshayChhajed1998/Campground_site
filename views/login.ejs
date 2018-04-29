@@ -1,0 +1,32 @@
+<%include partials/header %>
+
+<form action="/campground/login/auth" method="post">
+<div class="ui container" style="margin-top:100px">
+<div class="ui container grid">
+<div class="row">
+<div class="four wide column centered">
+<h1 class="Acme">Login To Yelp_Camp</h1>
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">user name:</h4>
+<input class="in ui input" type="text" name="username">
+</div>
+</div>
+<div class="row">
+<div class="three wide centered column">
+<h4 class="Acme">password:</h4>
+<input class="in ui input" type="password" name="password">
+</div>
+</div>
+<div class="row">
+<div class="two wide centered column">
+<input class="ui button inverted blue" type="submit" value="LOGIN"> 
+</div>
+</div>
+</div>
+</form>
+
+
+<% include partials/footer %>

@@ -1,0 +1,46 @@
+<% include partials/header %>
+<script >
+function defaultProfile(img)
+{
+	img.onerror=null;
+	img.src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-circle-128.png";
+}
+</script>
+</div>
+<div class="ui grid" style="margin-top:50px">
+<div class="three wide column">
+<div class="ui vertical menu">
+<a class="acme active item" href="/campground/:id/dashboard/post">         
+<%=user.username%>
+<img id="profile" class="ui circular image" style="border-radius:50% ; width:100px ; height:100px" src="/campground/dashboard/<%=user.id%>/profile" onerror="defaultProfile(this)">
+</a>
+<a class="acme item" href="/campground/:id/dashboard/post">
+Posts
+<div class="acme ui label"><%=user.post.length%>
+</div>
+</a>
+<a class="acme active item"  href="/campground/:id/dashboard/comment">
+Comments
+<div class="acme ui teal left pointing label"><%=user.comment.length%>
+</div>
+</a>
+</div>
+</div>
+<div class="twelve wide stretched column">
+<div class="boss">
+<%for(var i=0;i<user.comment.length;i++){%>
+<div class="ui segment inverted" style="margin-top:20px">
+<h3>comment:-<%=user.comment[i].value%></h3>
+<h4>Number of Comments:-<%=user.comment[i].created%></h4>
+<%if(user.comment[i].review==="1"){%>
+<h4>"The Comment is Reviewed"</h4>
+<%}else{%>
+<h4>"Your Comment is Yet Un-Reviewed by Author"</h4>
+<%}%>
+</div>
+<%}%>
+</div>
+</div>
+</div>
+<div>
+<% include partials/footer %>

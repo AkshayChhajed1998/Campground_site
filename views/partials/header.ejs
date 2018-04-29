@@ -1,0 +1,38 @@
+<DOCTYPE! HTML>
+
+<head>
+
+<title>CAMP_GROUND</title>
+<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+<link href="https://fonts.googleapis.com/css?family=Acme|Josefin+Sans|Poiret+One" rel="stylesheet">
+<link href="/SS.css" rel="stylesheet" type="text/css">
+<link  href="/div.css" rel="stylesheet" type="text/css" >
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+
+<body class="acme">
+
+
+<div class="ui fixed top mini menu inverted" style="font-family:Acme">
+<a class="item" href="/campground"><i class="Photo icon"></i>Yelp_Camp</a>
+<div class="right menu">
+<%if(user){%>
+<a class="acme ui button item" href="/campground/<%=user.id%>/dashboard/post" style="color:rgba(0,255,255,0.8)">WelCome <%=user.username%> !!!</a>
+<a class="acme ui button item" href="/campground/logout"><i class="Sign Out icon"></i>Logout</a>
+<%}else{%>
+<a class="acme ui button item" href="/campground/login"><i class="Sign In icon"></i>Login</a>
+<a class="acme ui button item" href="/campground/signup"><i class="User Circle icon"></i>Signup</a>
+<%}%>
+</div>
+</div>
+
+<%if(meser.length!==0){%>
+<div class="ui container inverted segment red" style="margin-top:60px"><%=meser%></div>
+<%}if(messu.length!==0){%>
+<div class="ui container inverted segment green" style="margin-top:60px"><%=messu%></div>
+<%}%>
+
+<div class="boss">

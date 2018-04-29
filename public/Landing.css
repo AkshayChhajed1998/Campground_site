@@ -1,0 +1,107 @@
+ul
+{
+	background-color: #000000;
+	list-style-type: none;
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:0;
+	padding:0px;
+	margin:0px;
+	top:0;
+	left:0;
+}
+ul li
+{
+	background-color: #000000;
+	width:100%;
+	height:100%;	
+	position:absolute;
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat:no-repeat;
+	opacity:0;
+	padding:0px;
+	margin:0px;
+	top:0;
+	left:0;
+	animation:ImageAnimation 50s linear infinite;
+}
+body
+{
+	background-color: #000000;
+}
+
+.color
+{
+	color:#f00;
+}
+
+.coiny
+{
+	font-family:"Coiny" !important;
+}
+
+a
+{
+	z-index: 20;
+}
+
+#heading
+{
+	z-index: 10;
+	color:#fff;
+	position:relative;
+	text-align: center;
+    
+	padding: 40vh;
+
+}
+
+ul li:nth-child(1) { 
+  background-image: url(http://i.imgur.com/K3mPv14.jpg) 
+}
+ul li:nth-child(2) { 
+  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
+  animation-delay: 10s; 
+}
+ul li:nth-child(3) { 
+  background-image: url(http://i.imgur.com/emvhOnb.jpg);
+  animation-delay: 20s; 
+}
+ul li:nth-child(4) { 
+  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
+  animation-delay: 30s; 
+}
+ul li:nth-child(5) { 
+  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  animation-delay: 40s; 
+}
+
+
+@keyframes ImageAnimation{
+
+	0%
+	{
+		opacity:0;
+		animation-timing-function:ease-in;
+	}
+
+	10%
+	{
+		opacity:1;
+		animation-timing-function:ease-out;
+
+	}
+
+	20%
+	{
+		opacity:1;
+	}
+
+	30%
+	{
+		opacity:0;
+	}
+
+}
